@@ -1,0 +1,17 @@
+# Mac
+.DS_Store
+
+# Node
+node_modules/
+
+# TypeScript
+tsconfig.tsbuildinfo
+
+# Coverage
+coverage/
+
+# Build
+dist/
+dist-ssr/
+*.local
+*.log
