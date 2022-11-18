@@ -1,7 +1,9 @@
 /// <reference types="vitest" />
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { resolve } from 'path';
+import vueI18n from '@intlify/vite-plugin-vue-i18n';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,7 +12,12 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    vueI18n({
+      include: resolve(dirname(fileURLToPath(import.meta.url)), './locales/**'),
+    }),
+  ],
   test: {
     globals: true,
     include: ['test/**/*.test.ts'],

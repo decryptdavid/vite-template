@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "coverage": "vitest run --coverage",
     "dev": "vite",
     "lint": "eslint --ext .ts,.js,.vue .",
@@ -16,10 +16,12 @@
     "@types/web-bluetooth": "^0.0.16",
     "@vueuse/core": "9.5.0",
     "vue": "^3.2.45",
+    "vue-i18n": "^9.2.2",
     "vue-router": "^4.1.6",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^6.0.3",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.8",
     "@types/node": "^18.11.9",
