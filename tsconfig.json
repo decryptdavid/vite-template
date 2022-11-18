@@ -13,7 +13,8 @@
     "lib": ["esnext", "dom"],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["web-bluetooth"]
   },
   "exclude": ["dist", "node_modules"],
   // "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
